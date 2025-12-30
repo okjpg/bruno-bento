@@ -122,13 +122,13 @@ export const YoutubeCard: React.FC<YoutubeCardProps> = ({
 
                 {/* Stats & CTA Row */}
                 <div className="pt-3 flex items-center justify-between border-t border-white/[0.03] group-hover:border-white/[0.06] transition-colors duration-500">
-                    <div className="flex items-center gap-4">
-                        <div className="flex flex-col">
-                            <span className="text-white text-xs font-medium">{channelName}</span>
+                    <div className="flex items-center gap-3 md:gap-4 min-w-0">
+                        <div className="flex flex-col min-w-0">
+                            <span className="text-white text-xs font-medium truncate">{channelName}</span>
                             <span className="text-[8px] text-white/30 uppercase tracking-widest">{channelLabel}</span>
                         </div>
-                        <div className="w-px h-5 bg-white/[0.06]" />
-                        <div className="flex flex-col">
+                        <div className="w-px h-5 bg-white/[0.06] shrink-0" />
+                        <div className="flex flex-col shrink-0">
                             <span className="text-white text-xs font-medium">{views}</span>
                             <span className="text-[8px] text-white/30 uppercase tracking-widest">{viewsLabel}</span>
                         </div>
@@ -138,10 +138,10 @@ export const YoutubeCard: React.FC<YoutubeCardProps> = ({
                         href="https://www.youtube.com/@microsaas?sub_confirmation=1"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.1] hover:bg-red-600 hover:border-red-600 text-white transition-all duration-300 group/btn"
+                        className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.1] hover:bg-red-600 hover:border-red-600 text-white transition-all duration-300 group/btn shrink-0 ml-2"
                     >
                         <Youtube className="w-3 h-3 fill-current group-hover/btn:scale-110 transition-transform" />
-                        <span className="text-[10px] font-semibold uppercase tracking-wider">{subscribeLabel}</span>
+                        <span className="text-[10px] font-semibold uppercase tracking-wider whitespace-nowrap">{subscribeLabel}</span>
                     </a>
                 </div>
             </div>

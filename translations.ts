@@ -93,21 +93,67 @@ export const translations = {
             back: "Voltar",
             download: "Download PDF",
             year: "Mídia Kit 2025",
+            heroHeadline: "Ajudei 20.000 fundadores a lançar seus negócios.",
+            heroSubheadline: "Sua marca pode fazer parte dessa história.",
             specialist: "Empreendedor, mentor e especialista em Micro-SaaS",
             reach: "Alcance Total",
             views: "Views Anuais",
             engagements: "Engajamentos",
+            nicheCreatorTitle: "Creator",
+            nicheCreatorLabel: "de nicho",
+            proofPoints: {
+                tedx: "TEDx Speaker",
+                topVoice: "Top 20 Global SaaS Voice",
+                years: "3+ Anos de Conteúdo"
+            },
+            thesisTitle: "O Que Me Diferencia",
+            thesis: {
+                transparency: {
+                    title: "Transparência Radical",
+                    description: "Compartilho números reais, erros e bastidores. Sem filtro."
+                },
+                community: {
+                    title: "Comunidade > Seguidores",
+                    description: "Engajamento genuíno com uma audiência que confia e interage."
+                },
+                antiHustle: {
+                    title: "Anti-Hustle Culture",
+                    description: "Empreendedorismo sustentável. Realidade, não glamour."
+                },
+                expertise: {
+                    title: "Expertise + Storytelling",
+                    description: "Conteúdo técnico profundo, contado de forma acessível."
+                }
+            },
             aboutTitle: "Sobre Mim",
             bio: [
-                "Sou um empreendedor apaixonado por desafios, e com profundo conhecimento sobre economia criativa movida por tecnologia (gig economy) e modelos de negócios tecnológicos.",
-                "Ao longo da minha jornada empreendedora de mais de 10 anos, vivenciei altos e baixos, e aprendi lições valiosas como um generalista. Construí equipes, produtos, comunidades e estratégias para diferentes modelos de negócios e mercados.",
-                "Ajudei mais de 250 Startups a lançarem seus primeiros MVPs. Sou cofundador da EUNERD e, hoje, estou construindo o maior Ecossistema de Micro-SaaS do Brasil.",
-                "Sou owner e creator da Comunidade de Micro-SaaS, que tem mais de 13 mil membros, com mais de 2.500 SaaS lançados. Produzo e distribuo conteúdo em 5 redes sociais, com 3 anos de experiência como creator nas áreas da Tecnologia, Empreendedorismo e afins."
+                "Sou pai do Caetano e do Joaquim, casado com a Lara. Moro em Curitiba e há mais de 10 anos empreendo no mundo digital.",
+                "Fundei a EUNERD em 2014, captei R$ 5 milhões, vivi os altos e baixos de uma startup, e saí em 2022 para começar algo novo.",
+                "Hoje lidero o maior ecossistema de Micro-SaaS do Brasil: uma comunidade de 20 mil fundadores que já lançaram mais de 3.000 produtos.",
+                "Produzo conteúdo em 5 redes sociais sobre empreendedorismo, tecnologia e a realidade de construir negócios — sem glamour, com transparência."
             ],
+            journey: [
+                { year: "14", label: "Fundou a EUNERD" },
+                { year: "20", label: "Captou R$ 5M (CVC)" },
+                { year: "22", label: "Saiu da EUNERD e começou a comunidade" },
+                { year: "23", label: "Lançou o Micro-SaaS PRO" },
+                { year: "24", label: "Lançou o 1º SaaS: MGM" },
+                { year: "25", label: "TEDx Speaker + Lançou Metricaas" }
+            ],
+            socialProofTitle: "Marcas que Já Confiaram",
+            socialProofSubtitle: "Parcerias e colaborações anteriores",
+            testimonialPlaceholder: "\"Depoimento de parceiro em breve.\"",
             presenceTitle: "Presença Digital",
-            audienceTitle: "Perfil da Audiência",
-            audienceHeadline: "Alguns dados da minha audiência",
+            audienceTitle: "Quem Eu Alcanço",
+            audienceHeadline: "Uma audiência qualificada de decision makers",
+            audienceContext: {
+                developers: "Decision makers em empresas de tech",
+                entrepreneurs: "Alto poder de compra e investimento",
+                founders: "Fundadores ativos construindo produtos",
+                marketing: "Profissionais de growth e aquisição"
+            },
             analyticsTitle: "Analytics por Plataforma",
+            analyticsBenchmark: "vs média do mercado",
             followers: "Seguidores",
             avgPost: "Média/post",
             aboveAvg: "Acima da média de mercado",
@@ -120,10 +166,10 @@ export const translations = {
             perMonth: "/mês",
             segments: {
                 developers: "Desenvolvedores",
-                entrepreneurs: "Empresários",
+                entrepreneurs: "Empresários Tech",
                 founders: "Founders de Startups",
                 marketing: "Marketing Digital",
-                others: "Outros"
+                others: "Outros (Bolha Tech)"
             },
             community: {
                 title: "Comunidade Micro-SaaS",
@@ -133,9 +179,36 @@ export const translations = {
                 redes: "Redes Sociais",
                 anos: "Anos de Conteúdo"
             },
+            pricingTitle: "Investimento",
+            pricingSubtitle: "Formatos de patrocínio disponíveis",
+            pricing: {
+                fullPackage: {
+                    title: "Pacote Full Funnel",
+                    badge: "Mais Popular",
+                    price: "R$ 20.000",
+                    priceUsd: "$4,500 USD",
+                    description: "Presença completa em todas as plataformas",
+                    includes: [
+                        "1 vídeo dedicado no YouTube (60k inscritos)",
+                        "1 newsletter dedicada (25k inscritos)",
+                        "1 post dedicado no LinkedIn (47k seguidores)",
+                        "1 post dedicado no Instagram (45k seguidores)"
+                    ]
+                },
+                youtube: {
+                    title: "YouTube Solo",
+                    price: "R$ 12.000",
+                    description: "Vídeo dedicado ou integração no canal"
+                },
+                custom: {
+                    title: "Custom",
+                    price: "Sob consulta",
+                    description: "Formatos personalizados para sua necessidade"
+                }
+            },
             contact: {
-                title: "Interessado em parceria?",
-                description: "Entre em contato para discutir oportunidades de colaboração, patrocínio ou publicidade.",
+                title: "Pronto para alcançar 170k+ fundadores e desenvolvedores?",
+                description: "Vamos conversar sobre como sua marca pode se conectar com essa audiência.",
                 whatsapp: "WhatsApp",
                 email: "Email"
             }
@@ -207,9 +280,10 @@ export const translations = {
             metricLabel: "views/year",
             audience: "Audience Profile",
             segments: {
-                entrepreneurs: "Entrepreneurs",
+                entrepreneurs: "Tech Entrepreneurs",
                 developers: "Developers",
-                others: "Others"
+                marketing: "Digital Marketing",
+                others: "Others (Tech Bubble)"
             },
             button: "View Media Kit"
         },
@@ -235,21 +309,67 @@ export const translations = {
             back: "Back",
             download: "Download PDF",
             year: "Media Kit 2025",
+            heroHeadline: "I helped 20,000 founders launch their businesses.",
+            heroSubheadline: "Your brand can be part of this story.",
             specialist: "Entrepreneur, mentor and Micro-SaaS specialist",
             reach: "Total Reach",
             views: "Annual Views",
             engagements: "Engagements",
+            nicheCreatorTitle: "Creator",
+            nicheCreatorLabel: "Niche",
+            proofPoints: {
+                tedx: "TEDx Speaker",
+                topVoice: "Top 20 Global SaaS Voice",
+                years: "3+ Years of Content"
+            },
+            thesisTitle: "What Makes Me Different",
+            thesis: {
+                transparency: {
+                    title: "Radical Transparency",
+                    description: "I share real numbers, mistakes, and behind the scenes. No filter."
+                },
+                community: {
+                    title: "Community > Followers",
+                    description: "Genuine engagement with an audience that trusts and interacts."
+                },
+                antiHustle: {
+                    title: "Anti-Hustle Culture",
+                    description: "Sustainable entrepreneurship. Reality, not glamour."
+                },
+                expertise: {
+                    title: "Expertise + Storytelling",
+                    description: "Deep technical content, told in an accessible way."
+                }
+            },
             aboutTitle: "About Me",
             bio: [
-                "I am an entrepreneur passionate about challenges, with deep knowledge of technology-driven creative economy (gig economy) and technological business models.",
-                "Over my 10+ year entrepreneurial journey, I've experienced highs and lows, learning valuable lessons as a generalist. I've built teams, products, communities, and strategies for different business models and markets.",
-                "I've helped over 250 Startups launch their first MVPs. I am a co-founder of EUNERD and today I am building the largest Micro-SaaS Ecosystem in Brazil.",
-                "I am the owner and creator of the Micro-SaaS Community, which has over 13,000 members and more than 2,500 SaaS launched. I produce and distribute content across 5 social networks, with 3 years of experience as a creator in Tech, Entrepreneurship, and related fields."
+                "I'm a father to Caetano and Joaquim, married to Lara. I live in Curitiba, Brazil, and have been building digital businesses for over 10 years.",
+                "I founded EUNERD in 2014, raised R$ 5 million, experienced the highs and lows of a startup, and left in 2022 to start something new.",
+                "Today I lead Brazil's largest Micro-SaaS ecosystem: a community of 20,000 founders who have launched over 3,000 products.",
+                "I create content across 5 social networks about entrepreneurship, technology, and the reality of building businesses — no glamour, just transparency."
             ],
+            journey: [
+                { year: "14", label: "Founded EUNERD" },
+                { year: "20", label: "Raised R$ 5M (CVC)" },
+                { year: "22", label: "Left EUNERD and started the community" },
+                { year: "23", label: "Launched Micro-SaaS PRO" },
+                { year: "24", label: "Launched 1st SaaS: MGM" },
+                { year: "25", label: "TEDx Speaker + Launched Metricaas" }
+            ],
+            socialProofTitle: "Brands That Trusted Us",
+            socialProofSubtitle: "Previous partnerships and collaborations",
+            testimonialPlaceholder: "\"Partner testimonial coming soon.\"",
             presenceTitle: "Digital Presence",
-            audienceTitle: "Audience Profile",
-            audienceHeadline: "Some data about my audience",
+            audienceTitle: "Who I Reach",
+            audienceHeadline: "A qualified audience of decision makers",
+            audienceContext: {
+                developers: "Decision makers in tech companies",
+                entrepreneurs: "High purchasing power and investment capacity",
+                founders: "Active founders building products",
+                marketing: "Growth and acquisition professionals"
+            },
             analyticsTitle: "Analytics by Platform",
+            analyticsBenchmark: "vs market average",
             followers: "Followers",
             avgPost: "Avg/post",
             aboveAvg: "Above market average",
@@ -262,10 +382,10 @@ export const translations = {
             perMonth: "/month",
             segments: {
                 developers: "Developers",
-                entrepreneurs: "Entrepreneurs",
+                entrepreneurs: "Tech Entrepreneurs",
                 founders: "Startup Founders",
                 marketing: "Digital Marketing",
-                others: "Others"
+                others: "Others (Tech Bubble)"
             },
             community: {
                 title: "Micro-SaaS Community",
@@ -275,9 +395,36 @@ export const translations = {
                 redes: "Social Networks",
                 anos: "Years of Content"
             },
+            pricingTitle: "Investment",
+            pricingSubtitle: "Available sponsorship formats",
+            pricing: {
+                fullPackage: {
+                    title: "Full Funnel Package",
+                    badge: "Most Popular",
+                    price: "R$ 20,000",
+                    priceUsd: "$4,500 USD",
+                    description: "Complete presence across all platforms",
+                    includes: [
+                        "1 dedicated YouTube video (60k subscribers)",
+                        "1 dedicated newsletter (25k subscribers)",
+                        "1 dedicated LinkedIn post (47k followers)",
+                        "1 dedicated Instagram post (45k followers)"
+                    ]
+                },
+                youtube: {
+                    title: "YouTube Solo",
+                    price: "R$ 12,000",
+                    description: "Dedicated video or channel integration"
+                },
+                custom: {
+                    title: "Custom",
+                    price: "On request",
+                    description: "Customized formats for your needs"
+                }
+            },
             contact: {
-                title: "Interested in partnership?",
-                description: "Get in touch to discuss collaboration, sponsorship or advertising opportunities.",
+                title: "Ready to reach 170k+ founders and developers?",
+                description: "Let's talk about how your brand can connect with this audience.",
                 whatsapp: "WhatsApp",
                 email: "Email"
             }

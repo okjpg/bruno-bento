@@ -117,8 +117,8 @@ const App: React.FC = () => {
 
     const stats = [
         { label: 'YouTube', value: '60k', color: '#FF0000' },
-        { label: 'Instagram', value: '45k', color: '#E1306C' },
-        { label: 'LinkedIn', value: '47k', color: '#0A66C2' },
+        { label: 'Instagram', value: '46k', color: '#E1306C' },
+        { label: 'LinkedIn', value: '46k', color: '#0A66C2' },
         { label: 'Newsletter', value: '25k', color: '#FBBF24' }
     ];
 
@@ -128,7 +128,6 @@ const App: React.FC = () => {
             desc: t.projects.metricaasDesc,
             icon: Activity,
             img: '/images/metricaas_dashboard.png',
-            tag: '$12k MRR',
             href: 'https://metricaas.ai/'
         },
         {
@@ -136,7 +135,6 @@ const App: React.FC = () => {
             desc: t.projects.mgmDesc,
             icon: Box,
             img: '/images/groupmetrics_dashboard.png',
-            tag: '2.5k Groups',
             href: 'https://www.mygroupmetrics.com/#'
         }
     ];
@@ -311,14 +309,14 @@ const App: React.FC = () => {
                                     {/* Journey Timeline */}
                                     <div className="space-y-3">
                                         <span className="text-label block opacity-80">{t.profile.journeyTitle}</span>
-                                        <div className="flex flex-col gap-2 timeline-line pl-0">
+                                        <div className="flex flex-col gap-3 timeline-line pl-0">
                                             {t.profile.journey.map((item, i) => (
                                                 <div
                                                     key={i}
-                                                    className="flex gap-3 items-center group relative z-10 py-0.5"
+                                                    className="flex gap-3 items-start group relative z-10 py-0.5"
                                                 >
                                                     <div
-                                                        className="w-8 h-6 rounded flex items-center justify-center shrink-0 border transition-all duration-300 animate-glow-wave"
+                                                        className="w-8 h-6 rounded flex items-center justify-center shrink-0 border transition-all duration-300 animate-glow-wave mt-0.5"
                                                         style={{
                                                             backgroundColor: 'rgba(255,255,255,0.02)',
                                                             '--glow-color': glowColors[i % glowColors.length],
@@ -332,7 +330,7 @@ const App: React.FC = () => {
                                                             '{item.year}
                                                         </span>
                                                     </div>
-                                                    <span className="text-[11px] font-light text-white/50 group-hover:text-white/90 transition-colors duration-300 truncate">
+                                                    <span className="text-[11px] font-light text-white/50 group-hover:text-white/90 transition-colors duration-300 leading-snug pt-1">
                                                         {item.label}
                                                     </span>
                                                 </div>
@@ -401,25 +399,25 @@ const App: React.FC = () => {
                                 {/* Stats & CTA Row */}
                                 <div className="flex flex-wrap items-center gap-4 md:gap-6">
                                     {/* Stats */}
-                                    <div className="flex items-center gap-5 py-2 px-4 rounded-2xl bg-white/[0.03] border border-white/[0.04] backdrop-blur-sm">
+                                    <div className="flex items-center gap-4 md:gap-5 py-2 px-3 md:px-4 rounded-2xl bg-white/[0.03] border border-white/[0.04] backdrop-blur-sm">
                                         <div className="flex flex-col">
                                             <span
                                                 ref={foundersCount.ref}
-                                                className="text-xl md:text-2xl font-display font-medium text-white tracking-tight"
+                                                className="text-lg md:text-2xl font-display font-medium text-white tracking-tight leading-none mb-1"
                                             >
                                                 {foundersCount.count}k+
                                             </span>
-                                            <span className="text-[9px] text-white/40 uppercase tracking-widest">{t.microsaas.stats.founders}</span>
+                                            <span className="text-[8px] md:text-[9px] text-white/40 uppercase tracking-widest">{t.microsaas.stats.founders}</span>
                                         </div>
-                                        <div className="w-px h-8 bg-gradient-to-b from-transparent via-white/10 to-transparent" />
+                                        <div className="w-px h-6 md:h-8 bg-gradient-to-b from-transparent via-white/10 to-transparent shrink-0" />
                                         <div className="flex flex-col">
                                             <span
                                                 ref={launchedCount.ref}
-                                                className="text-xl md:text-2xl font-display font-medium text-white tracking-tight"
+                                                className="text-lg md:text-2xl font-display font-medium text-white tracking-tight leading-none mb-1"
                                             >
                                                 {(launchedCount.count / 1000).toFixed(1)}k+
                                             </span>
-                                            <span className="text-[9px] text-white/40 uppercase tracking-widest">{t.microsaas.stats.launched}</span>
+                                            <span className="text-[8px] md:text-[9px] text-white/40 uppercase tracking-widest">{t.microsaas.stats.launched}</span>
                                         </div>
                                     </div>
 
@@ -464,9 +462,9 @@ const App: React.FC = () => {
 
                             <div className="space-y-2 mb-5">
                                 {t.mentorship.items.map((item, i) => (
-                                    <div key={i} className="flex justify-between items-center py-2.5 border-b border-white/[0.03] group-hover:border-white/[0.06] transition-colors">
-                                        <span className="text-sm text-white/60 font-light">{item.label}</span>
-                                        <span className={item.price.includes('consulta') || item.price.includes('request') ? "text-[10px] text-white/40 font-medium uppercase tracking-wider" : "text-sm text-white font-medium"}>
+                                    <div key={i} className="flex justify-between items-center gap-4 py-2.5 border-b border-white/[0.03] group-hover:border-white/[0.06] transition-colors">
+                                        <span className="text-sm text-white/60 font-light leading-tight">{item.label}</span>
+                                        <span className={`shrink-0 ${item.price.includes('consulta') || item.price.includes('request') ? "text-[10px] text-white/40 font-medium uppercase tracking-wider" : "text-sm text-white font-medium"}`}>
                                             {item.price}
                                         </span>
                                     </div>
@@ -521,8 +519,8 @@ const App: React.FC = () => {
                                         <div className="flex items-center justify-between mb-1">
                                             <span className="text-label">{t.ecosystem.label}</span>
                                         </div>
-                                        <div className="flex items-center gap-3">
-                                            <h3 className="text-base font-display text-white whitespace-nowrap">{t.ecosystem.title}</h3>
+                                        <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+                                            <h3 className="text-base font-display text-white">{t.ecosystem.title}</h3>
                                             <div
                                                 className="px-2 py-0.5 rounded border border-white/10 bg-white/5 animate-glow-wave shrink-0"
                                                 style={{ '--glow-color': '#3B82F6' } as React.CSSProperties}
@@ -570,9 +568,11 @@ const App: React.FC = () => {
                                     <span className="text-label mb-4">{t.ecosystem.audience}</span>
                                     <div className="space-y-4">
                                         {[
-                                            { label: t.ecosystem.segments.entrepreneurs, percent: 50 },
-                                            { label: t.ecosystem.segments.developers, percent: 35 },
-                                            { label: t.ecosystem.segments.others, percent: 15 }
+                                            { label: t.ecosystem.segments.entrepreneurs, percent: 40 },
+                                            { label: t.ecosystem.segments.developers, percent: 30 },
+                                            { label: (t.mediakit.segments as any).founders, percent: 10 },
+                                            { label: (t.mediakit.segments as any).marketing, percent: 10 },
+                                            { label: t.ecosystem.segments.others, percent: 10 }
                                         ].map((bar, i) => (
                                             <div key={i} className="flex flex-col gap-1.5 group">
                                                 <div className="flex justify-between text-[10px] text-white/50 uppercase tracking-wider">
@@ -688,9 +688,6 @@ const App: React.FC = () => {
                                             <div className="w-10 h-10 rounded-xl bg-white/5 backdrop-blur-md flex items-center justify-center border border-white/[0.05] group-hover:bg-white group-hover:text-black group-hover:border-transparent transition-all duration-500">
                                                 <project.icon className="w-4 h-4" />
                                             </div>
-                                            <span className="px-2.5 py-1 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-[9px] font-bold uppercase tracking-wider text-white/80">
-                                                {project.tag}
-                                            </span>
                                         </div>
 
                                         {/* Bottom Row */}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://bruno.microsaas.com.br</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://bruno.microsaas.com.br?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bruno.microsaas.com.br?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bruno.microsaas.com.br"/>
+    <image:image>
+      <image:loc>https://bruno.microsaas.com.br/og-image.png</image:loc>
+      <image:title>Bruno Okamoto - Founder, Creator &amp; Investor em Micro-SaaS</image:title>
+      <image:caption>Portfolio e hub digital de Bruno Okamoto</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Media Kit (SPA route) -->
+  <url>
+    <loc>https://bruno.microsaas.com.br/mediakit</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://bruno.microsaas.com.br/mediakit?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bruno.microsaas.com.br/mediakit?lang=en"/>
+    <image:image>
+      <image:loc>https://bruno.microsaas.com.br/og-mediakit.png</image:loc>
+      <image:title>Bruno Okamoto - Media Kit 2025</image:title>
+      <image:caption>Métricas, audiência e oportunidades de parceria</image:caption>
+    </image:image>
+  </url>
+
+</urlset>

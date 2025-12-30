@@ -1,0 +1,37 @@
+# robots.txt for bruno.microsaas.com.br
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://bruno.microsaas.com.br/sitemap.xml
+
+# Crawl-delay (optional, for politeness)
+Crawl-delay: 1
+
+# Disallow admin or private paths (if any)
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /

@@ -1,0 +1,104 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#000000"/>
+
+  <!-- Gradient Orbs -->
+  <defs>
+    <radialGradient id="orb1mk" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(150 100) scale(350)">
+      <stop offset="0%" stop-color="#EC4899" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#EC4899" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb2mk" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1050 530) scale(400)">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb3mk" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(600 -100) scale(600)">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Orbs -->
+  <ellipse cx="150" cy="100" rx="350" ry="350" fill="url(#orb1mk)"/>
+  <ellipse cx="1050" cy="530" rx="400" ry="400" fill="url(#orb2mk)"/>
+  <ellipse cx="600" cy="-100" rx="600" ry="500" fill="url(#orb3mk)"/>
+
+  <!-- Noise texture overlay -->
+  <filter id="noisemk">
+    <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="4" stitchTiles="stitch"/>
+    <feColorMatrix type="saturate" values="0"/>
+  </filter>
+  <rect width="1200" height="630" filter="url(#noisemk)" opacity="0.03"/>
+
+  <!-- Badge -->
+  <g transform="translate(80, 80)">
+    <rect x="0" y="0" width="130" height="36" rx="18" fill="white" fill-opacity="0.05"/>
+    <rect x="0" y="0" width="130" height="36" rx="18" stroke="white" stroke-opacity="0.15" stroke-width="1" fill="none"/>
+    <circle cx="24" cy="18" r="4" fill="#10B981"/>
+    <text x="75" y="23" text-anchor="middle" fill="white" fill-opacity="0.6" font-family="Inter, sans-serif" font-size="11" font-weight="600" letter-spacing="0.15em">MEDIA KIT</text>
+  </g>
+
+  <!-- Main Title -->
+  <g transform="translate(80, 160)">
+    <text x="0" y="0" fill="white" font-family="Space Grotesk, sans-serif" font-size="64" font-weight="500" letter-spacing="-0.02em">Bruno Okamoto</text>
+    <text x="0" y="70" fill="white" fill-opacity="0.4" font-family="Inter, sans-serif" font-size="32" font-weight="300">Media Kit 2025</text>
+  </g>
+
+  <!-- Stats Cards -->
+  <g transform="translate(80, 320)">
+    <!-- Card 1 - Reach -->
+    <rect x="0" y="0" width="200" height="120" rx="24" fill="white" fill-opacity="0.03"/>
+    <rect x="0" y="0" width="200" height="120" rx="24" stroke="white" stroke-opacity="0.08" stroke-width="1" fill="none"/>
+    <text x="24" y="45" fill="white" font-family="Space Grotesk, sans-serif" font-size="42" font-weight="600">171K+</text>
+    <text x="24" y="80" fill="white" fill-opacity="0.3" font-family="Inter, sans-serif" font-size="12" font-weight="600" letter-spacing="0.15em">ALCANCE TOTAL</text>
+
+    <!-- Card 2 - Views -->
+    <rect x="220" y="0" width="200" height="120" rx="24" fill="white" fill-opacity="0.03"/>
+    <rect x="220" y="0" width="200" height="120" rx="24" stroke="white" stroke-opacity="0.08" stroke-width="1" fill="none"/>
+    <text x="244" y="45" fill="white" font-family="Space Grotesk, sans-serif" font-size="42" font-weight="600">4.8M+</text>
+    <text x="244" y="80" fill="white" fill-opacity="0.3" font-family="Inter, sans-serif" font-size="12" font-weight="600" letter-spacing="0.15em">VISUALIZAÇÕES</text>
+
+    <!-- Card 3 - Engagement -->
+    <rect x="440" y="0" width="200" height="120" rx="24" fill="white" fill-opacity="0.03"/>
+    <rect x="440" y="0" width="200" height="120" rx="24" stroke="white" stroke-opacity="0.08" stroke-width="1" fill="none"/>
+    <text x="464" y="45" fill="white" font-family="Space Grotesk, sans-serif" font-size="42" font-weight="600">105K+</text>
+    <text x="464" y="80" fill="white" fill-opacity="0.3" font-family="Inter, sans-serif" font-size="12" font-weight="600" letter-spacing="0.15em">ENGAJAMENTOS</text>
+  </g>
+
+  <!-- Platform Icons -->
+  <g transform="translate(80, 480)">
+    <!-- YouTube -->
+    <rect x="0" y="0" width="100" height="44" rx="22" fill="#FF0000" fill-opacity="0.15"/>
+    <text x="50" y="28" text-anchor="middle" fill="#FF0000" font-family="Inter, sans-serif" font-size="12" font-weight="700">YouTube</text>
+
+    <!-- LinkedIn -->
+    <rect x="115" y="0" width="100" height="44" rx="22" fill="#0A66C2" fill-opacity="0.15"/>
+    <text x="165" y="28" text-anchor="middle" fill="#0A66C2" font-family="Inter, sans-serif" font-size="12" font-weight="700">LinkedIn</text>
+
+    <!-- Instagram -->
+    <rect x="230" y="0" width="100" height="44" rx="22" fill="#E1306C" fill-opacity="0.15"/>
+    <text x="280" y="28" text-anchor="middle" fill="#E1306C" font-family="Inter, sans-serif" font-size="12" font-weight="700">Instagram</text>
+
+    <!-- Newsletter -->
+    <rect x="345" y="0" width="100" height="44" rx="22" fill="#FF6719" fill-opacity="0.15"/>
+    <text x="395" y="28" text-anchor="middle" fill="#FF6719" font-family="Inter, sans-serif" font-size="12" font-weight="700">Newsletter</text>
+  </g>
+
+  <!-- URL Badge -->
+  <g transform="translate(80, 555)">
+    <text x="0" y="20" fill="white" fill-opacity="0.3" font-family="Inter, sans-serif" font-size="14" font-weight="500">bruno.microsaas.com.br/mediakit</text>
+  </g>
+
+  <!-- Profile Element -->
+  <g transform="translate(950, 250)">
+    <rect x="0" y="0" width="180" height="220" rx="32" fill="white" fill-opacity="0.03"/>
+    <rect x="0" y="0" width="180" height="220" rx="32" stroke="white" stroke-opacity="0.08" stroke-width="1" fill="none"/>
+
+    <!-- Avatar placeholder -->
+    <circle cx="90" cy="80" r="45" fill="#1a1a1a" stroke="white" stroke-opacity="0.1" stroke-width="2"/>
+    <text x="90" y="90" text-anchor="middle" fill="white" fill-opacity="0.4" font-family="Inter, sans-serif" font-size="20" font-weight="600">BO</text>
+
+    <text x="90" y="155" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="14" font-weight="600">Bruno Okamoto</text>
+    <text x="90" y="180" text-anchor="middle" fill="white" fill-opacity="0.4" font-family="Inter, sans-serif" font-size="11" font-weight="500">Founder &amp; Creator</text>
+  </g>
+</svg>

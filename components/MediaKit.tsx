@@ -846,8 +846,8 @@ const MediaKit: React.FC<MediaKitProps> = ({ onBack, lang }) => {
 
                             <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 md:gap-20">
                                 {[
-                                    { value: "13k+", label: t.mediakit.community.membros },
-                                    { value: "2.5k+", label: t.mediakit.community.saas },
+                                    { value: "20k+", label: t.mediakit.community.membros },
+                                    { value: "3k+", label: t.mediakit.community.saas },
                                     { value: "5", label: t.mediakit.community.redes },
                                     { value: "3+", label: t.mediakit.community.anos }
                                 ].map((stat, idx) => (

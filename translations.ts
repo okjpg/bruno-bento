@@ -65,9 +65,11 @@ export const translations = {
             metricLabel: "visualizações/ano",
             audience: "Perfil da Audiência",
             segments: {
-                entrepreneurs: "Empreendedores",
                 developers: "Desenvolvedores",
-                others: "Outros"
+                entrepreneurs: "Empresários Tech",
+                founders: "Founders de Startups",
+                marketing: "Marketing Digital",
+                others: "Outros (Bolha Tech)"
             },
             button: "Ver Media Kit"
         },
@@ -280,8 +282,9 @@ export const translations = {
             metricLabel: "views/year",
             audience: "Audience Profile",
             segments: {
-                entrepreneurs: "Tech Entrepreneurs",
                 developers: "Developers",
+                entrepreneurs: "Tech Entrepreneurs",
+                founders: "Startup Founders",
                 marketing: "Digital Marketing",
                 others: "Others (Tech Bubble)"
             },

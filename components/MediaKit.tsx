@@ -116,7 +116,7 @@ const MediaKit: React.FC<MediaKitProps> = ({ onBack, lang }) => {
 
     // Counter hooks for hero stats
     const totalReach = useCountUp(171, 2000, 'K+');
-    const totalViews = useCountUp(4.8, 2500, 'M+');
+    const totalViews = useCountUp(5.1, 2500, 'M+');
 
     // Platform data
     const platforms = {
@@ -200,10 +200,10 @@ const MediaKit: React.FC<MediaKitProps> = ({ onBack, lang }) => {
 
     // Audience demographics with context
     const audienceData = [
-        { label: t.mediakit.segments.entrepreneurs, percent: 40, color: '#3B82F6', context: t.mediakit.audienceContext.entrepreneurs },
-        { label: t.mediakit.segments.developers, percent: 30, color: '#8B5CF6', context: t.mediakit.audienceContext.developers },
-        { label: t.mediakit.segments.founders, percent: 10, color: '#10B981', context: t.mediakit.audienceContext.founders },
-        { label: t.mediakit.segments.marketing, percent: 10, color: '#F59E0B', context: t.mediakit.audienceContext.marketing },
+        { label: t.mediakit.segments.entrepreneurs, percent: 40, color: '#3B82F6', context: (t as any).mediakit.audienceContext.entrepreneurs },
+        { label: t.mediakit.segments.developers, percent: 30, color: '#8B5CF6', context: (t as any).mediakit.audienceContext.developers },
+        { label: t.mediakit.segments.founders, percent: 10, color: '#10B981', context: (t as any).mediakit.audienceContext.founders },
+        { label: t.mediakit.segments.marketing, percent: 10, color: '#F59E0B', context: (t as any).mediakit.audienceContext.marketing },
         { label: t.mediakit.segments.others, percent: 10, color: '#6B7280', context: null }
     ];
 

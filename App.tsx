@@ -570,8 +570,8 @@ const App: React.FC = () => {
                                         {[
                                             { label: t.ecosystem.segments.entrepreneurs, percent: 40 },
                                             { label: t.ecosystem.segments.developers, percent: 30 },
-                                            { label: (t.mediakit.segments as any).founders, percent: 10 },
-                                            { label: (t.mediakit.segments as any).marketing, percent: 10 },
+                                            { label: t.ecosystem.segments.founders, percent: 10 },
+                                            { label: t.ecosystem.segments.marketing, percent: 10 },
                                             { label: t.ecosystem.segments.others, percent: 10 }
                                         ].map((bar, i) => (
                                             <div key={i} className="flex flex-col gap-1.5 group">

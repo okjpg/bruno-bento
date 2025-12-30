@@ -330,8 +330,11 @@ const MediaKit: React.FC<MediaKitProps> = ({ onBack, lang }) => {
                     </button>
 
                     <a
-                        href="#"
-                        className="group flex items-center gap-3 px-6 py-2.5 rounded-full bg-white text-black hover:bg-white/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-500 shadow-[0_10px_20px_rgba(255,255,255,0.05)]"
+                        href="/mediakit-bruno-okamoto.pdf"
+                        download
+                        className="group flex items-center gap-3 px-6 py-2.5 rounded-full bg-white/20 text-white/50 cursor-not-allowed transition-all duration-500 shadow-[0_10px_20px_rgba(255,255,255,0.05)]"
+                        onClick={(e) => e.preventDefault()}
+                        title={lang === 'pt' ? 'Em breve' : 'Coming soon'}
                     >
                         <Download className="w-4 h-4" />
                         <span className="text-xs font-bold uppercase tracking-wider">{t.mediakit.download}</span>

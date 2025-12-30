@@ -711,8 +711,7 @@ const App: React.FC = () => {
                 <footer className="mt-12 md:mt-20 pt-8 border-t border-white/[0.04] flex flex-col md:flex-row justify-between items-center text-white/25 text-[10px] tracking-widest uppercase gap-4 font-medium pb-6 animate-fade-in delay-10">
                     <span>© 2025 Bruno Okamoto. {t.footer.rights}</span>
                     <div className="flex gap-6">
-                        <a href="#" className="hover:text-white transition-colors duration-300">{t.footer.privacy}</a>
-                        <a href="#" className="hover:text-white transition-colors duration-300">{t.footer.contact}</a>
+                        <a href="mailto:bruno@microsaas.com.br" className="hover:text-white transition-colors duration-300">{t.footer.contact}</a>
                     </div>
                 </footer>
 

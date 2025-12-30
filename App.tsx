@@ -10,8 +10,6 @@ import {
     ArrowRight,
     Activity,
     Box,
-    Layers,
-    Camera,
     Fingerprint,
     Mail,
     Sparkles,
@@ -70,27 +68,15 @@ const getDelay = (index: number) => index + 1;
 
 const App: React.FC = () => {
     const [currentPage, setCurrentPage] = useState<'home' | 'mediakit'>('home');
-    const [profileImage, setProfileImage] = useState("/images/bruno_profile_2025.jpg");
     const [lang, setLang] = useState<'pt' | 'en'>('pt');
-    const fileInputRef = useRef<HTMLInputElement>(null);
     const [email, setEmail] = useState('');
+    const profileImage = "/images/bruno_profile_2025.jpg";
 
     const t = translations[lang];
 
     // Stats counters - MUST be called before any conditional return
     const foundersCount = useCountUp(20, 2000);
     const launchedCount = useCountUp(3000, 2000);
-
-    const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const file = event.target.files?.[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onloadend = () => {
-                setProfileImage(reader.result as string);
-            };
-            reader.readAsDataURL(file);
-        }
-    };
 
     // If on MediaKit page, render MediaKit component
     if (currentPage === 'mediakit') {
@@ -229,24 +215,11 @@ const App: React.FC = () => {
                                 <div className="flex md:flex-col items-center md:items-start gap-5 md:gap-0">
 
                                     {/* Avatar */}
-                                    <div
-                                        onClick={() => fileInputRef.current?.click()}
-                                        className="relative w-16 h-16 md:w-24 md:h-24 rounded-2xl md:rounded-[1.25rem] overflow-hidden cursor-pointer group md:mb-8 shrink-0 transition-all duration-500 ring-2 ring-white/[0.03] hover:ring-white/[0.08]"
-                                    >
-                                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center backdrop-blur-sm">
-                                            <Camera className="w-5 h-5 text-white drop-shadow-lg" />
-                                        </div>
+                                    <div className="relative w-16 h-16 md:w-24 md:h-24 rounded-2xl md:rounded-[1.25rem] overflow-hidden group md:mb-8 shrink-0 transition-all duration-500 ring-2 ring-white/[0.03] hover:ring-white/[0.08]">
                                         <img
                                             src={profileImage}
                                             className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
                                             alt="Bruno Okamoto"
-                                        />
-                                        <input
-                                            type="file"
-                                            ref={fileInputRef}
-                                            onChange={handleImageUpload}
-                                            className="hidden"
-                                            accept="image/*"
                                         />
                                     </div>
 

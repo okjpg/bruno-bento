@@ -260,7 +260,7 @@ const MediaKit: React.FC<MediaKitProps> = ({ onBack, lang }) => {
     // Example posts data
     const examplePosts = [
         {
-            title: lang === 'pt' ? "Growth & Storytelling (Magie)" : "Growth & Storytelling (Magie)",
+            title: lang === 'pt' ? "Post do Linkedin (Growth + storytelling)" : "LinkedIn Post (Growth + storytelling)",
             description: lang === 'pt' ? "O caso de como o João Camargo fingiu ser um BOT para validar a Magie. Um exemplo real de MVP 'no osso' que gerou discussões profundas sobre product-led growth e validação de hipóteses." : "The case of how João Camargo pretended to be a BOT to validate Magie. A real example of a 'bare bones' MVP that sparked deep discussions about product-led growth and hypothesis validation.",
             image: "/images/content/magie_case.png",
             stats: [
@@ -755,7 +755,7 @@ const MediaKit: React.FC<MediaKitProps> = ({ onBack, lang }) => {
                             {t.mediakit.contentTitle}
                         </h2>
                         <p className="text-3xl md:text-5xl font-display font-medium text-white tracking-tighter leading-tight">
-                            Crafting high-signal content for the next generation of founders.
+                            {lang === 'pt' ? 'Crie uma peça dedicada de conteúdo que se replica em todas redes sociais. Veja o case da Magie.' : 'Create a dedicated piece of content that replicates across all social networks. See the Magie case study.'}
                         </p>
                     </div>
 

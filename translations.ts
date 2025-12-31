@@ -10,9 +10,9 @@ export const translations = {
         },
         profile: {
             title: {
-                l1: "Criando",
-                l2: "Ecossistemas",
-                l3: "Digitais."
+                l1: "Líder do maior",
+                l2: "ecossistema Micro-SaaS",
+                l3: "do Brasil."
             },
             tags: {
                 topVoice: "Top 20 Global SaaS Voice",
@@ -37,11 +37,11 @@ export const translations = {
             ]
         },
         microsaas: {
-            badge: "Comunidade Principal",
-            description: "O principal ecossistema para fundadores de tecnologia independentes construindo o futuro do software enxuto no Brasil.",
+            badge: "Micro-SaaS: O melhor modelo para empreender do zero na era da IA",
+            description: "Construa seu Micro-SaaS em 90 dias — sem programar, sem investir, sem largar o emprego.",
             stats: {
-                founders: "Fundadores",
-                launched: "Lançados"
+                founders: "Membros",
+                launched: "SaaS Lançados"
             },
             button: "Entrar na Comunidade"
         },
@@ -60,7 +60,7 @@ export const translations = {
             button: "Inscrever-se"
         },
         ecosystem: {
-            label: "Pegada Digital",
+            label: "Audiência",
             title: "Alcance do Ecossistema",
             metricLabel: "visualizações/ano",
             audience: "Perfil da Audiência",
@@ -83,8 +83,8 @@ export const translations = {
         },
         projects: {
             sectionTitle: "Meu portfólio de SaaS",
-            metricaasDesc: "Analytics de SaaS",
-            mgmDesc: "Data analytics para grupos no whatsapp"
+            metricaasDesc: "Métricas de SaaS sem complicação. MRR, Churn, LTV — sem planilhas, sem dor de cabeça.",
+            mgmDesc: "Analytics + IA para grupos de WhatsApp. Métricas em tempo real e respostas instantâneas."
         },
         footer: {
             rights: "Todos os direitos reservados.",
@@ -227,9 +227,9 @@ export const translations = {
         },
         profile: {
             title: {
-                l1: "Crafting",
-                l2: "Digital",
-                l3: "Ecosystems."
+                l1: "Leader of Brazil's",
+                l2: "largest Micro-SaaS",
+                l3: "ecosystem."
             },
             tags: {
                 topVoice: "Top 20 Global SaaS Voice",
@@ -254,11 +254,11 @@ export const translations = {
             ]
         },
         microsaas: {
-            badge: "Flagship Community",
-            description: "The premier ecosystem for independent tech founders building the future of lean software in Brazil.",
+            badge: "Micro-SaaS: The best model to start from zero in the AI era",
+            description: "Build your Micro-SaaS in 90 days — no coding, no investment, no quitting your job.",
             stats: {
-                founders: "Founders",
-                launched: "Launched"
+                founders: "Members",
+                launched: "SaaS Launched"
             },
             button: "Join Community"
         },
@@ -277,7 +277,7 @@ export const translations = {
             button: "Subscribe"
         },
         ecosystem: {
-            label: "Digital Footprint",
+            label: "Audience",
             title: "Ecosystem Reach",
             metricLabel: "views/year",
             audience: "Audience Profile",
@@ -300,8 +300,8 @@ export const translations = {
         },
         projects: {
             sectionTitle: "My SaaS Portfolio",
-            metricaasDesc: "SaaS Analytics",
-            mgmDesc: "Data analytics for WhatsApp groups"
+            metricaasDesc: "SaaS metrics without the hassle. MRR, Churn, LTV — no spreadsheets, no headaches.",
+            mgmDesc: "Analytics + AI for WhatsApp groups. Real-time metrics and instant answers."
         },
         footer: {
             rights: "All Rights Reserved.",

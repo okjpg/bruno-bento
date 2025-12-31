@@ -128,7 +128,7 @@ export const BentoCard: React.FC<BentoCardProps> = ({
         </div>
       )}
 
-      <div className={`flex-1 relative z-10 ${noPadding ? '' : 'p-5 md:p-8'}`}>
+      <div className={`flex-1 relative z-10 ${noPadding ? '' : 'p-4 md:p-8'}`}>
         {children}
       </div>
     </div>

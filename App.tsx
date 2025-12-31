@@ -75,7 +75,7 @@ const App: React.FC = () => {
     const t = translations[lang];
 
     // Stats counters - MUST be called before any conditional return
-    const foundersCount = useCountUp(20, 2000);
+    const foundersCount = useCountUp(20000, 2000);
     const launchedCount = useCountUp(3000, 2000);
 
     // If on MediaKit page, render MediaKit component
@@ -209,7 +209,7 @@ const App: React.FC = () => {
                             variant="glass"
                             delay={getDelay(0)}
                         >
-                            <div className="p-5 md:p-7 h-full flex flex-col relative z-20">
+                            <div className="p-4 md:p-7 h-full flex flex-col relative z-20">
 
                                 {/* Profile Header */}
                                 <div className="flex md:flex-col items-center md:items-start gap-5 md:gap-0">
@@ -231,13 +231,13 @@ const App: React.FC = () => {
                                     </h1>
                                 </div>
 
-                                {/* Tags */}
+                                {/* Tags - Simplified colors */}
                                 <div className="flex flex-wrap gap-1.5 mt-5 md:mt-0">
                                     <a
                                         href="https://www.favikon.com/blog/top-saas-influencers#heres-the-list-of-the-top-20-saas-influencers-in-2025"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-[10px] font-bold uppercase tracking-wider text-amber-500 hover:bg-amber-500/20 transition-colors cursor-pointer shadow-[0_0_15px_-5px_rgba(245,158,11,0.3)] hover:scale-[1.02]"
+                                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.1] text-[10px] font-bold uppercase tracking-wider text-white/70 hover:bg-white/[0.1] transition-colors cursor-pointer"
                                     >
                                         <Sparkles className="w-3 h-3" />
                                         <span>{t.profile.tags.topVoice}</span>
@@ -247,27 +247,37 @@ const App: React.FC = () => {
                                         href="https://www.youtube.com/watch?v=_GSrjWqitzM"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-red-600/10 border border-red-600/20 text-[10px] font-bold uppercase tracking-wider text-red-500 hover:bg-red-600/20 transition-colors cursor-pointer hover:scale-[1.02]"
+                                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.1] text-[10px] font-bold uppercase tracking-wider text-white/70 hover:bg-white/[0.1] transition-colors cursor-pointer"
                                     >
                                         <span>{t.profile.tags.speaker}</span>
                                     </a>
 
-                                    <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-[10px] font-bold uppercase tracking-wider text-purple-500 hover:bg-purple-500/20 transition-colors cursor-default hover:scale-[1.02]">
+                                    <span className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.1] text-[10px] font-bold uppercase tracking-wider text-white/70">
                                         {t.profile.tags.founder}
                                     </span>
 
-                                    <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-[10px] font-bold uppercase tracking-wider text-blue-500 hover:bg-blue-500/20 transition-colors cursor-default hover:scale-[1.02]">
+                                    <span className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.1] text-[10px] font-bold uppercase tracking-wider text-white/70">
                                         {t.profile.tags.investor}
                                     </span>
 
-                                    <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-pink-500/10 border border-pink-500/20 text-[10px] font-bold uppercase tracking-wider text-pink-500 hover:bg-pink-500/20 transition-colors cursor-default hover:scale-[1.02]">
+                                    <span className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.1] text-[10px] font-bold uppercase tracking-wider text-white/70">
                                         {t.profile.tags.creator}
                                     </span>
                                 </div>
 
                                 {/* Bio Section */}
                                 <div className="space-y-6 flex-1 mt-6 pt-6 border-t border-white/[0.04]">
-                                    <div className="space-y-3">
+                                    {/* Mobile: Short authority-focused bio */}
+                                    <div className="md:hidden">
+                                        <p className="text-white/50 text-sm leading-relaxed">
+                                            {lang === 'pt'
+                                                ? 'Lidero o maior ecossistema de Micro-SaaS do Brasil. +20k founders, +3k SaaS lançados em 3 anos. TEDx Speaker e Top 20 Global SaaS Voice.'
+                                                : 'I lead Brazil\'s largest Micro-SaaS ecosystem. +20k founders, +3k SaaS launched in 3 years. TEDx Speaker and Top 20 Global SaaS Voice.'
+                                            }
+                                        </p>
+                                    </div>
+                                    {/* Desktop: Full bio */}
+                                    <div className="hidden md:block space-y-3">
                                         {t.profile.bio.map((paragraph, i) => (
                                             <p
                                                 key={i}
@@ -279,8 +289,8 @@ const App: React.FC = () => {
                                         ))}
                                     </div>
 
-                                    {/* Journey Timeline */}
-                                    <div className="space-y-3">
+                                    {/* Journey Timeline - Hidden on mobile for cleaner look */}
+                                    <div className="hidden md:block space-y-3">
                                         <span className="text-label block opacity-80">{t.profile.journeyTitle}</span>
                                         <div className="flex flex-col gap-3 timeline-line pl-0">
                                             {t.profile.journey.map((item, i) => (
@@ -349,7 +359,7 @@ const App: React.FC = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-[#020202] via-[#020202]/70 to-transparent" />
                             <div className="absolute inset-0 bg-gradient-to-r from-[#020202]/30 to-transparent" />
 
-                            <div className="relative z-10 p-5 md:p-8 lg:p-10 h-full flex flex-col justify-end">
+                            <div className="relative z-10 p-4 md:p-8 lg:p-10 h-full flex flex-col justify-end">
 
                                 {/* Badge */}
                                 <div className="flex items-center gap-2 mb-4">
@@ -378,7 +388,7 @@ const App: React.FC = () => {
                                                 ref={foundersCount.ref}
                                                 className="text-lg md:text-2xl font-display font-medium text-white tracking-tight leading-none mb-1"
                                             >
-                                                {foundersCount.count}k+
+                                                {foundersCount.count.toLocaleString('pt-BR')}+
                                             </span>
                                             <span className="text-[8px] md:text-[9px] text-white/40 uppercase tracking-widest">{t.microsaas.stats.founders}</span>
                                         </div>
@@ -388,7 +398,7 @@ const App: React.FC = () => {
                                                 ref={launchedCount.ref}
                                                 className="text-lg md:text-2xl font-display font-medium text-white tracking-tight leading-none mb-1"
                                             >
-                                                {(launchedCount.count / 1000).toFixed(1)}k+
+                                                {launchedCount.count.toLocaleString('pt-BR')}+
                                             </span>
                                             <span className="text-[8px] md:text-[9px] text-white/40 uppercase tracking-widest">{t.microsaas.stats.launched}</span>
                                         </div>
@@ -445,7 +455,7 @@ const App: React.FC = () => {
                             </div>
 
                             <a
-                                href="https://wa.me/5511980905374"
+                                href="https://wa.me/5541992271011"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center justify-between w-full py-2.5 pl-5 pr-2.5 rounded-xl bg-white/[0.05] border border-white/[0.1] text-white hover:bg-white hover:text-black hover:border-transparent font-semibold text-xs uppercase tracking-wider hover:shadow-[0_8px_32px_rgba(255,255,255,0.15)] transition-all duration-300 group/btn"
@@ -464,7 +474,7 @@ const App: React.FC = () => {
                     <div className="md:col-span-4">
                         <YoutubeCard
                             videoId="KCdvVD1yV1Y"
-                            title="@MicroSaaS"
+                            title={lang === 'pt' ? 'Guia Completo Micro-SaaS' : 'Complete Micro-SaaS Guide'}
                             description={t.youtube.description}
                             channelName="Bruno Okamoto"
                             views="1.5M+"
@@ -472,6 +482,8 @@ const App: React.FC = () => {
                             subscribeLabel={t.youtube.button}
                             channelLabel={lang === 'pt' ? 'Canal' : 'Channel'}
                             viewsLabel={lang === 'pt' ? 'Visitas' : 'Views'}
+                            freeBadgeLabel={lang === 'pt' ? 'Gratuito' : 'Free'}
+                            duration="49min"
                         />
                     </div>
 
@@ -536,8 +548,8 @@ const App: React.FC = () => {
                                     </button>
                                 </div>
 
-                                {/* Right: Audience Profile */}
-                                <div className="flex-1 bg-white/[0.015] rounded-xl p-4 border border-white/[0.02] flex flex-col justify-center">
+                                {/* Right: Audience Profile - Hidden on mobile to reduce clutter */}
+                                <div className="hidden md:flex flex-1 bg-white/[0.015] rounded-xl p-4 border border-white/[0.02] flex flex-col justify-center">
                                     <span className="text-label mb-4">{t.ecosystem.audience}</span>
                                     <div className="space-y-4">
                                         {[
@@ -637,11 +649,43 @@ const App: React.FC = () => {
                             <div className="flex-1 h-px bg-gradient-to-r from-transparent via-white/[0.08] to-transparent" />
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+                        {/* Mobile: Clean card layout */}
+                        <div className="flex flex-col gap-3 md:hidden">
+                            {projects.map((project, i) => (
+                                <a
+                                    key={i}
+                                    href={project.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group flex items-center gap-4 p-4 rounded-2xl bg-white/[0.02] border border-white/[0.06] active:scale-[0.98] active:bg-white/[0.05] transition-all duration-300"
+                                >
+                                    {/* Icon */}
+                                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] border border-white/[0.08] flex items-center justify-center shrink-0">
+                                        <project.icon className="w-6 h-6 text-white/70" />
+                                    </div>
+
+                                    {/* Content */}
+                                    <div className="flex-1 min-w-0">
+                                        <h3 className="text-base font-display font-medium text-white mb-1">{project.title}</h3>
+                                        <p className="text-white/40 text-xs font-light leading-relaxed line-clamp-2">
+                                            {project.desc}
+                                        </p>
+                                    </div>
+
+                                    {/* Arrow */}
+                                    <div className="w-8 h-8 rounded-full bg-white/[0.05] border border-white/[0.08] flex items-center justify-center shrink-0">
+                                        <ArrowUpRight className="w-4 h-4 text-white/50" />
+                                    </div>
+                                </a>
+                            ))}
+                        </div>
+
+                        {/* Desktop: Original hover-based cards */}
+                        <div className="hidden md:grid md:grid-cols-2 gap-4">
                             {projects.map((project, i) => (
                                 <BentoCard
                                     key={i}
-                                    className="min-h-[200px] md:min-h-[240px] overflow-hidden cursor-pointer"
+                                    className="min-h-[240px] overflow-hidden cursor-pointer"
                                     noPadding
                                     variant="solid"
                                     onClick={() => project.href && window.open(project.href, '_blank')}
@@ -654,7 +698,7 @@ const App: React.FC = () => {
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
 
-                                    <div className="relative z-10 p-5 md:p-6 h-full flex flex-col justify-between">
+                                    <div className="relative z-10 p-6 h-full flex flex-col justify-between">
 
                                         {/* Top Row */}
                                         <div className="flex justify-between items-start">

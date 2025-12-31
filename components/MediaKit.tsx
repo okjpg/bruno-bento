@@ -425,7 +425,7 @@ const MediaKit: React.FC<MediaKitProps> = ({ onBack, lang }) => {
                     THESIS - O Que Me Diferencia (4 Pilares)
                 ═══════════════════════════════════════════════════════════════════ */}
                 <section className="px-6 md:px-12 mb-24 md:mb-40 animate-fade-in delay-2">
-                    <h2 className="text-sm font-bold text-white/20 uppercase tracking-[0.4em] mb-12 text-center">
+                    <h2 className="text-xs md:text-sm font-bold text-white/50 uppercase tracking-[0.3em] mb-12 text-center">
                         {t.mediakit.thesisTitle}
                     </h2>
 
@@ -510,7 +510,7 @@ const MediaKit: React.FC<MediaKitProps> = ({ onBack, lang }) => {
 
                         {/* Narrative Side */}
                         <div className="lg:col-span-7">
-                            <h2 className="text-sm font-bold text-white/20 uppercase tracking-[0.4em] mb-12">
+                            <h2 className="text-xs md:text-sm font-bold text-white/50 uppercase tracking-[0.3em] mb-12">
                                 {t.mediakit.aboutTitle}
                             </h2>
                             <div className="space-y-8">
@@ -547,7 +547,7 @@ const MediaKit: React.FC<MediaKitProps> = ({ onBack, lang }) => {
                     SOCIAL PROOF - Marcas e Depoimentos
                 ═══════════════════════════════════════════════════════════════════ */}
                 <section className="px-6 md:px-12 mb-24 md:mb-40 animate-fade-in delay-4">
-                    <h2 className="text-sm font-bold text-white/20 uppercase tracking-[0.4em] mb-4 text-center">
+                    <h2 className="text-xs md:text-sm font-bold text-white/50 uppercase tracking-[0.3em] mb-4 text-center">
                         {t.mediakit.socialProofTitle}
                     </h2>
                     <p className="text-white/30 text-sm text-center mb-12">
@@ -582,7 +582,7 @@ const MediaKit: React.FC<MediaKitProps> = ({ onBack, lang }) => {
                     SOCIAL PRESENCE - Tactile Grid
                 ═══════════════════════════════════════════════════════════════════ */}
                 <section className="px-6 md:px-12 mb-24 md:mb-40 animate-fade-in delay-5">
-                    <h2 className="text-sm font-bold text-white/20 uppercase tracking-[0.4em] mb-12">
+                    <h2 className="text-xs md:text-sm font-bold text-white/50 uppercase tracking-[0.3em] mb-12">
                         {t.mediakit.presenceTitle}
                     </h2>
 
@@ -658,7 +658,7 @@ const MediaKit: React.FC<MediaKitProps> = ({ onBack, lang }) => {
                 <section className="px-6 md:px-12 mb-24 md:mb-40 animate-fade-in delay-4">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-20">
                         <div className="lg:col-span-4">
-                            <h2 className="text-sm font-bold text-white/20 uppercase tracking-[0.4em] mb-6">
+                            <h2 className="text-xs md:text-sm font-bold text-white/50 uppercase tracking-[0.3em] mb-6">
                                 {t.mediakit.audienceTitle}
                             </h2>
                             <h3 className="text-3xl md:text-5xl font-display font-medium text-white tracking-tighter leading-tight">
@@ -706,7 +706,7 @@ const MediaKit: React.FC<MediaKitProps> = ({ onBack, lang }) => {
                 <section className="px-6 md:px-12 mb-24 md:mb-40 animate-fade-in delay-5">
                     <div className="flex flex-col md:flex-row md:items-end justify-between gap-12 mb-16">
                         <div className="max-w-xl">
-                            <h2 className="text-sm font-bold text-white/20 uppercase tracking-[0.4em] mb-6">
+                            <h2 className="text-xs md:text-sm font-bold text-white/50 uppercase tracking-[0.3em] mb-6">
                                 {t.mediakit.analyticsTitle}
                             </h2>
                             <p className="text-lg md:text-2xl font-light text-white/40 leading-relaxed">
@@ -754,7 +754,7 @@ const MediaKit: React.FC<MediaKitProps> = ({ onBack, lang }) => {
                 ═══════════════════════════════════════════════════════════════════ */}
                 <section className="px-6 md:px-12 mb-32 md:mb-56 animate-fade-in delay-6">
                     <div className="max-w-xl mb-24">
-                        <h2 className="text-sm font-bold text-white/20 uppercase tracking-[0.4em] mb-6">
+                        <h2 className="text-xs md:text-sm font-bold text-white/50 uppercase tracking-[0.3em] mb-6">
                             {t.mediakit.contentTitle}
                         </h2>
                         <p className="text-3xl md:text-5xl font-display font-medium text-white tracking-tighter leading-tight">
@@ -839,7 +839,7 @@ const MediaKit: React.FC<MediaKitProps> = ({ onBack, lang }) => {
 
                         <div className="relative z-10">
                             <div className="max-w-xl mb-16">
-                                <h3 className="text-sm font-bold text-white/20 uppercase tracking-[0.4em] mb-6">
+                                <h3 className="text-xs md:text-sm font-bold text-white/50 uppercase tracking-[0.3em] mb-6">
                                     {t.mediakit.community.title}
                                 </h3>
                                 <p className="text-xl md:text-2xl font-light text-white/50 leading-relaxed">
@@ -872,7 +872,7 @@ const MediaKit: React.FC<MediaKitProps> = ({ onBack, lang }) => {
                     PRICING - Investimento
                 ═══════════════════════════════════════════════════════════════════ */}
                 <section className="px-6 md:px-12 mb-32 md:mb-56 animate-fade-in delay-8">
-                    <h2 className="text-sm font-bold text-white/20 uppercase tracking-[0.4em] mb-4 text-center">
+                    <h2 className="text-xs md:text-sm font-bold text-white/50 uppercase tracking-[0.3em] mb-4 text-center">
                         {t.mediakit.pricingTitle}
                     </h2>
                     <p className="text-white/30 text-sm text-center mb-16">

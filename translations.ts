@@ -10,7 +10,7 @@ export const translations = {
         },
         profile: {
             title: {
-                l1: "Líder do maior",
+                l1: "Construindo o",
                 l2: "ecossistema Micro-SaaS",
                 l3: "do Brasil."
             },
@@ -227,8 +227,8 @@ export const translations = {
         },
         profile: {
             title: {
-                l1: "Leader of Brazil's",
-                l2: "largest Micro-SaaS",
+                l1: "Building Brazil's",
+                l2: "Micro-SaaS",
                 l3: "ecosystem."
             },
             tags: {

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { BentoCard } from './components/BentoCard';
 import { YoutubeCard } from './components/YoutubeCard';
 import MediaKit from './components/MediaKit';
@@ -18,51 +18,6 @@ import {
 } from 'lucide-react';
 import { translations } from './translations';
 
-// Animated counter hook for stats
-const useCountUp = (end: number, duration: number = 2000, startOnView: boolean = true) => {
-    const [count, setCount] = useState(0);
-    const [hasStarted, setHasStarted] = useState(!startOnView);
-    const ref = useRef<HTMLSpanElement>(null);
-
-    useEffect(() => {
-        if (!hasStarted) return;
-
-        let startTime: number;
-        let animationFrame: number;
-
-        const animate = (timestamp: number) => {
-            if (!startTime) startTime = timestamp;
-            const progress = Math.min((timestamp - startTime) / duration, 1);
-            setCount(Math.floor(progress * end));
-            if (progress < 1) {
-                animationFrame = requestAnimationFrame(animate);
-            }
-        };
-
-        animationFrame = requestAnimationFrame(animate);
-        return () => cancelAnimationFrame(animationFrame);
-    }, [end, duration, hasStarted]);
-
-    useEffect(() => {
-        if (!startOnView || !ref.current) return;
-
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setHasStarted(true);
-                    observer.disconnect();
-                }
-            },
-            { threshold: 0.5 }
-        );
-
-        observer.observe(ref.current);
-        return () => observer.disconnect();
-    }, [startOnView]);
-
-    return { count, ref };
-};
-
 // Staggered animation delay helper
 const getDelay = (index: number) => index + 1;
 
@@ -73,10 +28,6 @@ const App: React.FC = () => {
     const profileImage = "/images/bruno_profile_2025.jpg";
 
     const t = translations[lang];
-
-    // Stats counters - MUST be called before any conditional return
-    const foundersCount = useCountUp(20000, 2000);
-    const launchedCount = useCountUp(3000, 2000);
 
     // If on MediaKit page, render MediaKit component
     if (currentPage === 'mediakit') {
@@ -224,7 +175,7 @@ const App: React.FC = () => {
                                     </div>
 
                                     {/* Title */}
-                                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-display font-medium leading-[0.95] tracking-tight md:mb-6">
+                                    <h1 className="text-[1.35rem] md:text-3xl lg:text-4xl font-display font-medium leading-[0.95] tracking-tight md:mb-6">
                                         {t.profile.title.l1}<br />
                                         <span className="text-white/30">{t.profile.title.l2}</span><br />
                                         {t.profile.title.l3}
@@ -384,21 +335,15 @@ const App: React.FC = () => {
                                     {/* Stats */}
                                     <div className="flex items-center gap-4 md:gap-5 py-2 px-3 md:px-4 rounded-2xl bg-white/[0.03] border border-white/[0.04] backdrop-blur-sm">
                                         <div className="flex flex-col">
-                                            <span
-                                                ref={foundersCount.ref}
-                                                className="text-lg md:text-2xl font-display font-medium text-white tracking-tight leading-none mb-1"
-                                            >
-                                                {foundersCount.count.toLocaleString('pt-BR')}+
+                                            <span className="text-lg md:text-2xl font-display font-medium text-white tracking-tight leading-none mb-1">
+                                                +20k
                                             </span>
                                             <span className="text-[8px] md:text-[9px] text-white/40 uppercase tracking-widest">{t.microsaas.stats.founders}</span>
                                         </div>
                                         <div className="w-px h-6 md:h-8 bg-gradient-to-b from-transparent via-white/10 to-transparent shrink-0" />
                                         <div className="flex flex-col">
-                                            <span
-                                                ref={launchedCount.ref}
-                                                className="text-lg md:text-2xl font-display font-medium text-white tracking-tight leading-none mb-1"
-                                            >
-                                                {launchedCount.count.toLocaleString('pt-BR')}+
+                                            <span className="text-lg md:text-2xl font-display font-medium text-white tracking-tight leading-none mb-1">
+                                                +3k
                                             </span>
                                             <span className="text-[8px] md:text-[9px] text-white/40 uppercase tracking-widest">{t.microsaas.stats.launched}</span>
                                         </div>
@@ -667,7 +612,7 @@ const App: React.FC = () => {
                                     {/* Content */}
                                     <div className="flex-1 min-w-0">
                                         <h3 className="text-base font-display font-medium text-white mb-1">{project.title}</h3>
-                                        <p className="text-white/40 text-xs font-light leading-relaxed line-clamp-2">
+                                        <p className="text-white/40 text-[11px] font-light leading-relaxed">
                                             {project.desc}
                                         </p>
                                     </div>

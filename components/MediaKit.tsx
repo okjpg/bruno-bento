@@ -830,45 +830,6 @@ const MediaKit: React.FC<MediaKitProps> = ({ onBack, lang }) => {
                 </section>
 
                 {/* ═══════════════════════════════════════════════════════════════════
-                    COMMUNITY STATS - High Contrast Module
-                ═══════════════════════════════════════════════════════════════════ */}
-                <section className="px-6 md:px-12 mb-32 md:mb-56 animate-fade-in delay-7">
-                    <div className="relative p-12 md:p-20 rounded-[3rem] bg-[#080808] border border-white/[0.05] overflow-hidden group">
-                        {/* Interactive background effect */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
-
-                        <div className="relative z-10">
-                            <div className="max-w-xl mb-16">
-                                <h3 className="text-xs md:text-sm font-bold text-white/50 uppercase tracking-[0.3em] mb-6">
-                                    {t.mediakit.community.title}
-                                </h3>
-                                <p className="text-xl md:text-2xl font-light text-white/50 leading-relaxed">
-                                    {t.mediakit.community.subtitle}
-                                </p>
-                            </div>
-
-                            <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 md:gap-20">
-                                {[
-                                    { value: "20k+", label: t.mediakit.community.membros },
-                                    { value: "3k+", label: t.mediakit.community.saas },
-                                    { value: "5", label: t.mediakit.community.redes },
-                                    { value: "3+", label: t.mediakit.community.anos }
-                                ].map((stat, idx) => (
-                                    <div key={idx} className="flex flex-col">
-                                        <div className="text-4xl md:text-6xl font-display font-medium text-white tracking-tighter mb-2">
-                                            {stat.value}
-                                        </div>
-                                        <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/20">
-                                            {stat.label}
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* ═══════════════════════════════════════════════════════════════════
                     PRICING - Investimento
                 ═══════════════════════════════════════════════════════════════════ */}
                 <section className="px-6 md:px-12 mb-32 md:mb-56 animate-fade-in delay-8">
